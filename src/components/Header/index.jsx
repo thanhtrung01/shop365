@@ -44,13 +44,13 @@ const Header = () => {
               <div className="absolute left-0 xl:rounded-full sm:w-none mobile:w-full sm:rounded-none py-3 px-3 inset-y-0 bg-rose-300"
                 style={{ borderRadius: '35px 0 70px 35px' }}
               >
-                
-              </div>
-              <img
+                <img
                   src="https://glo365.vn/wp-content/uploads/2020/07/Glo365-logo-2000x600.svg"
                   className="mr-3 h-6 sm:h-9"
                   alt="Flowbite React Logo"
                 />
+              </div>
+              
             </Navbar.Brand>
            {/* input search */}
            <div className="relative ml-[65%] w-[50%]">
