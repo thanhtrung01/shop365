@@ -91,6 +91,7 @@ export function Home() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [SlidebaShow, setSlideba] = useState(null);
   const [slidesToShow, setSlidesToShow] = useState(6);
+  const [slidesToShows, setSlidesToShows] = useState(72);
   const [inputShow, setInput] = useState(3);
   const bubbleImageStyle = {
     backgroundImage: `url('https://glo365.vn/wp-content/themes/ndg-quantum/imgs/header-bubble.svg')`,
@@ -103,32 +104,32 @@ export function Home() {
   };
   const handleFormSubmit = (event) => {
     event.preventDefault();
-  const name = event.target.name.value;
+    const name = event.target.name.value;
     const email = event.target.email.value;
     const content = event.target.content.value;
-  const requestData = {
-    name,
-    email,
-    content,
-  };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  fetch('https://api-glory365.onrender.com/api/v1/contact/create', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(requestData)
-  })
-    .then((response) => {
-      if (response.ok) {
-        alert('Đặt hẹn thành công')
-      } else {
-        alert('Có lỗi xảy ra khi gửi thông tin')
-      }
+    const requestData = {
+      name,
+      email,
+      content,
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    fetch('https://api-glory365.onrender.com/api/v1/contact/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestData)
     })
-    .catch((error) => {
-      console.error('Lỗi:', error)
-    })
+      .then((response) => {
+        if (response.ok) {
+          alert('Đặt hẹn thành công')
+        } else {
+          alert('Có lỗi xảy ra khi gửi thông tin')
+        }
+      })
+      .catch((error) => {
+        console.error('Lỗi:', error)
+      })
   };
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -147,10 +148,12 @@ export function Home() {
         setSlidesToShow(1);
         setInput(1)
         setSlideba(sliders)
+        setSlidesToShows(20)
       } else {
         setSlidesToShow(6);
         setSlideba(null)
         setInput(3)
+        setSlidesToShows(72)
       }
     }
     window.addEventListener('resize', handleResize)
@@ -238,16 +241,16 @@ export function Home() {
           }
         `}
       </style>
-      <div
+      {/* <div
         style={bubbleImageStyle}
         className="bg-[100%] border-none bg-contain top-0 bg-cover bg-center bg-no-repeat position"
       >
         <div className="hidden sm:block w-[10%] h-[340px] animate-slide"></div>
         <div className="block sm:hidden w-[20%] h-[90px]"></div>
-      </div>
+      </div> */}
       <div className='h-1 '></div>
       <div className="relative z-10">
-        <div className='position m-auto mb-10 w-full m-auto h-72'>
+        <div className={`position m-auto mb-40 w-full m-auto h-${slidesToShows}`}>
           <div className='w-[80%] m-auto h-[100%] sm:h-[100%]'>
             <Slider {...settings}>
               {images.map((image, index) => (
@@ -264,7 +267,7 @@ export function Home() {
           </div>
         </div>
       </div>
-      <img className='pt-10' src='https://glo365.vn/wp-content/uploads/2019/09/line-02.svg' alt='ảnh' /> 
+      <img className='pt-10' src='https://glo365.vn/wp-content/uploads/2019/09/line-02.svg' alt='ảnh' />
       <div className='mt-10'>
         <h2 className="text-4xl mt-10 mb-20"></h2>
         <div className=" h-auto flex justify-center items-center grid xl:grid-cols-3 mb-20 xl:flex-row sm:flex-col flex-col">

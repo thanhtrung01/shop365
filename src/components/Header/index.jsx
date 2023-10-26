@@ -10,6 +10,7 @@ import { AiFillInstagram } from "react-icons/ai";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [selectedNavItem, setSelectedNavItem] = useState("home");
+  const [inputShows, setInputs] = useState(5);
   const handleScroll = () => {
     if (window.scrollY > 10) {
       setScrolled(true);
@@ -25,7 +26,20 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setInputs(1)
+      } else {
+        setInputs(5)
+      }
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize()
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    };
+  }, [])
   return (
     <div className={`${scrolled ? "" : "hidden"}`}>
       <div className="xl:h-10 sm:h-0 h-0"></div>
@@ -54,7 +68,7 @@ const Header = () => {
                 placeholder="Search ..."
                 type="text"
                 style={{ width: '196px' }}
-                className="relative w-[100%] ml-2 border-none pl-4 right-0 sm:m-none border-white rounded-2xl focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 focus:invalid:border-x-rose-300 invalid:border-x-rose-300 hover:border-rose-600 w-7/12"
+                className={`relative w-[100%] ml-${inputShows} border-none pl-4 right-0 sm:m-none border-white rounded-2xl focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 focus:invalid:border-x-rose-300 invalid:border-x-rose-300 hover:border-rose-600 w-7/12`}
               />
             </div>
           </div>

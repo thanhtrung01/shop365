@@ -127,7 +127,7 @@ export default function index() {
   const [openMenu, setOpenMenu] = useState("");
 
   return (
-    <div className=" w-[100%] h-auto flex flex-col items-center justify-center mb-20">
+    <div className="h-auto flex flex-col items-center justify-center mb-20">
       <h2
         style={{
           boxSizing: "border-box",
@@ -149,10 +149,10 @@ export default function index() {
       >
         Dịch vụ thẩm mỹ
       </h2>
-      <div className=" flex flex-col items-center">
+      <div className=" flex w-[80%] flex-col items-center">
         {data.map((item, i) => (
           <div key={i}
-            className={`mx-40 w-full my-2 h-full flex flex-col items-center justify-center rounded-lg   ${openMenu === item.name ? "h-1/3 " : "h-20 "
+            className={`mx-40 w-full my-2 h-full flex flex-col items-center justify-center rounded-lg   ${openMenu === item.id ? "h-1/3 " : "h-20 "
               } `}
           >
             {" "}
@@ -164,21 +164,21 @@ export default function index() {
               }}
               id={"panel-626-1-0-0"}
               onClick={() => {
-                setOpenMenu(item.name === openMenu ? "" : item.name), toggle;
+                setOpenMenu(item.id === openMenu ? "" : item.id), toggle;
               }}
               data-index={2}
-              className="w-4/5 flex justify-center"
+              className="w-4/5 flex justify-center cursor-pointer"
             >
               <div
                 style={{
                   boxShadow: "0 3px 30px rgba(255,103,152,.31)",
                 }}
-                className={`p-5 w-full bg-slate-50  flex justify-center items-center rounded-3xl ${openMenu === item.name ? "h-1/3 " : "h-14 "
+                className={`p-5 w-full bg-slate-50  flex justify-center items-center rounded-3xl ${openMenu === item.id ? "h-1/3 " : "h-14 "
                   }`}
                 id={"musthave"}
               >
                 <h3
-                  className={`  hover:text-pink-600  ${openMenu === item.name ? "hidden " : "block"
+                  className={`  hover:text-pink-600  ${openMenu === item.id ? "hidden " : "block"
                     }`}
                 >
                   {" "}
@@ -187,7 +187,7 @@ export default function index() {
 
                 <div
                   id={"pl-w64f4c4564fe52"}
-                  className={`panel-layout ${openMenu === item.name ? "block" : "hidden"
+                  className={`panel-layout ${openMenu === item.id ? "block" : "hidden"
                     }`}
                 >
                   <div
@@ -235,7 +235,7 @@ export default function index() {
                     >
                       <p className="w-3/4">{item.title}</p>
                       <div className="w-12/12">
-                        <div className={`items-center grid xl:grid-cols-${item.block?.length} `}>
+                        <div className={`items-center grid ${window.innerWidth < 768 ? 'xl:grid-cols-1' : `grid-cols-${item.block?.length}`} `}>
                           {item.block.length > 0 ? (
                             item.block.map((noneblock, index) => (
                               <div
@@ -243,7 +243,7 @@ export default function index() {
                                 style={{
                                   boxShadow: "0 3px 30px rgba(255,103,152,.31)",
                                 }}
-                                className="w-full mx-auto xl:w-5/6 px-5 h-14 rounded-full flex justify-center items-center mt-10 border-2 border-rose-200"
+                                className=" mx-auto xl:w-5/6 px-6 h-14 rounded-full flex justify-center items-center mt-10 border-2 border-rose-200"
                               >
                                 <p>
                                   <a href={noneblock.link}>
