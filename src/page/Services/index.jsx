@@ -236,14 +236,15 @@ export default function index() {
                       <p className="w-3/4">{item.title}</p>
                       <div className="w-12/12">
                         <div className={`items-center grid ${window.innerWidth < 768 ? 'xl:grid-cols-1' : `grid-cols-${item.block?.length}`} `}>
-                          {item.block.length > 0 ? (
+                        {openMenu === item.id &&
+                            item.block.length > 0 &&
                             item.block.map((noneblock, index) => (
                               <div
                                 key={index}
                                 style={{
                                   boxShadow: "0 3px 30px rgba(255,103,152,.31)",
                                 }}
-                                className=" mx-auto xl:w-5/6 px-6 h-14 rounded-full flex justify-center items-center mt-10 border-2 border-rose-200"
+                                className="w-full mx-auto xl:w-5/6 px-5 h-14 rounded-full flex justify-center items-center mt-10 border-2 border-rose-200"
                               >
                                 <p>
                                   <a href={noneblock.link}>
@@ -252,7 +253,7 @@ export default function index() {
                                 </p>
                               </div>
                             ))
-                          ) : null}
+                          }
 
                         </div>
                       </div>
