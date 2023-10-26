@@ -235,7 +235,7 @@ export default function index() {
                     >
                       <p className="w-3/4">{item.title}</p>
                       <div className="w-12/12">
-                        <div className={`items-center grid xl:grid-cols-${item.block.length || 3} `}>
+                        <div className={`items-center grid xl:grid-cols-${item.block?.length} `}>
                           {item.block.length > 0 ? (
                             item.block.map((noneblock, index) => (
                               <div
