@@ -40,27 +40,22 @@ const Header = () => {
         >
           <div className="50 flex">
             <Navbar.Brand as={Link} to="/">
-              {/* div màu hồng */}
-              <div className="absolute left-0 xl:rounded-full sm:w-none mobile:w-full sm:rounded-none py-3 px-3 inset-y-0 bg-rose-300"
-                style={{ borderRadius: '35px 0 70px 35px' }}
-              >
-                <img
-                  src="https://glo365.vn/wp-content/uploads/2020/07/Glo365-logo-2000x600.svg"
-                  className="mr-3 h-6 sm:h-9"
-                  alt="Flowbite React Logo"
-                />
+              <div className="hidden sm:block absolute left-0 xl:rounded-full py-3 px-3 inset-y-0 bg-rose-300" style={{ borderRadius: '35px 0 70px 35px' }}>
+                <img src="https://glo365.vn/wp-content/uploads/2020/07/Glo365-logo-2000x600.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
               </div>
-              
+              <div className="hidden sm:block xl:rounded-[10%]"></div>
+              <div className="block sm:hidden absolute">
+                <img src="https://glo365.vn/wp-content/uploads/2020/07/Glo365-logo-2000x600.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+              </div>
             </Navbar.Brand>
-           {/* input search */}
-           <div className="relative ml-[65%] w-[50%]">
-            <input
-              icon={AiOutlineSearch}
-              placeholder="Search ..."    
-              type="text"
-              style={{width: '196px' }}
-              className="relative w-[100%] ml-5 border-none pl-4 right-0 sm:m-none border-white rounded-2xl focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 focus:invalid:border-x-rose-300 invalid:border-x-rose-300 hover:border-rose-600 w-7/12"
-            />
+            <div className="relative ml-[65%] w-[50%]">
+              <input
+                icon={AiOutlineSearch}
+                placeholder="Search ..."
+                type="text"
+                style={{ width: '196px' }}
+                className="relative w-[100%] ml-2 border-none pl-4 right-0 sm:m-none border-white rounded-2xl focus:outline-none focus:border-rose-300 focus:ring-1 focus:ring-rose-300 focus:invalid:border-x-rose-300 invalid:border-x-rose-300 hover:border-rose-600 w-7/12"
+              />
             </div>
           </div>
 

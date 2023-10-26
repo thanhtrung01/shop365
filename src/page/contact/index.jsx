@@ -18,7 +18,6 @@ export default function index() {
             <p> {datax.conten}</p>
           </div>
         ))}</div>
-
     </div>
   )
 }
