@@ -72,7 +72,7 @@ const Header = () => {
               >DỊCH VỤ</Link>
             </Navbar>
             <Navbar className="xl:px-0 md:px-0">
-              <Link to="https://glory365.vercel.app">CỬA HÀNG</Link>
+              <Link to="https://shop365.onrender.com/cua-hang">CỬA HÀNG</Link>
             </Navbar>
 
             <Navbar className="xl:px-0 md:px-0">
@@ -96,7 +96,7 @@ const Header = () => {
             </Navbar>
 
             <Navbar className="xl:px-0 md:px-0">
-              <Link to="https://glory365.vercel.app">MAGAZINE</Link>
+              <Link to="https://shop365.onrender.com/blog">MAGAZINE</Link>
             </Navbar>
 
             <Navbar className="xl:px-0 md:px-0">
