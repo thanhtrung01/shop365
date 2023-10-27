@@ -238,9 +238,13 @@ export default function index() {
                         <div
                           className={`items-center grid ${window.innerWidth < 768
                               ? 'xl:grid-cols-1'
-                              : item.block?.length < 3
-                                ? `xl:grid-cols-${item.block.length}`
-                                : `grid-cols-${item.block.length}`
+                              : window.innerWidth >= 768 && window.innerWidth < 1024
+                                ? 'grid-cols-4'
+                                : window.innerWidth >= 1024 && item.block.length === 6
+                                  ? 'grid-cols-6'
+                                  : window.innerWidth >= 1024 && item.block.length === 4
+                                    ? 'grid-cols-4'
+                                    : 'xl:grid-cols-' + item.block.length
                             }`}
                         >
                           {openMenu === item.id &&
