@@ -235,8 +235,15 @@ export default function index() {
                     >
                       <p className="w-3/4">{item.title}</p>
                       <div className="w-12/12">
-                        <div className={`items-center grid ${window.innerWidth < 768 ? 'xl:grid-cols-1' : `grid-cols-${item.block?.length}`} `}>
-                        {openMenu === item.id &&
+                        <div
+                          className={`items-center grid ${window.innerWidth < 768
+                              ? 'xl:grid-cols-1'
+                              : item.block?.length < 3
+                                ? `xl:grid-cols-${item.block.length}`
+                                : `grid-cols-${item.block.length}`
+                            }`}
+                        >
+                          {openMenu === item.id &&
                             item.block.length > 0 &&
                             item.block.map((noneblock, index) => (
                               <div
