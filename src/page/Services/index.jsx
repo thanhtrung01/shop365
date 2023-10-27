@@ -149,7 +149,7 @@ export default function index() {
       >
         Dịch vụ thẩm mỹ
       </h2>
-      <div className=" flex w-[80%] flex-col items-center">
+      <div className=" flex w-[100%] flex-col items-center">
         {data.map((item, i) => (
           <div key={i}
             className={`mx-40 w-full my-2 h-full flex flex-col items-center justify-center rounded-lg   ${openMenu === item.id ? "h-1/3 " : "h-20 "
