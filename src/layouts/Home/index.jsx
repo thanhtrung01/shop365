@@ -3,7 +3,7 @@ import Header from '../../components/Header'
 // eslint-disable-next-line react/prop-types
 const HomeLayout = ({ children }) => {
   return (
-    <div className="container w-full w-screen h-auto relative">
+    <div className="container min-w-full h-auto relative">
       <Header />
       <div
         style={{

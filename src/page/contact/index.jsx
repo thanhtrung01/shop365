@@ -7,7 +7,7 @@ const data = [{ icon: 'https://glo365.vn/wp-content/themes/ndg-quantum/imgs/eart
 export default function index() {
   return (
     <div>
-      <h2 className="text-4xl mt-10 mb-20">LIÊN HỆ</h2>
+      <h2 className="min-w-full text-4xl mt-10 mb-20">LIÊN HỆ</h2>
       <div className=" h-auto flex justify-center items-center grid xl:grid-cols-3 mb-20 xl:flex-row sm:flex-col flex-col">
         {data.map((datax, i) => (
           <div key={i} className=" h-auto flex flex-col items-center m-auto mb-10">

@@ -187,7 +187,7 @@ export function Home() {
     margin: '0 auto',
   }
   return (
-    <div className="container md:w-screen w-full h-auto relative">
+    <div className="container min-w-full h-auto relative">
       <style>
         {`
         .slider-container {

@@ -127,7 +127,7 @@ export default function index() {
   const [openMenu, setOpenMenu] = useState("");
 
   return (
-    <div className="w-screen h-auto flex flex-col items-center justify-center mb-20">
+    <div className="min-w-full h-auto flex flex-col items-center justify-center mb-20">
       <h2
         style={{
           boxSizing: "border-box",

@@ -4,7 +4,7 @@ import {FaLocationDot} from "react-icons/fa6"
 import HeaderImage from "../../assets/header.png";
 export default function index() {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex min-w-full flex-col justify-center items-center">
       
       <h2 className="text-4xl font-light my-5">SỰ KIỆN HOT</h2>
       
