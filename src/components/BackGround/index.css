@@ -1,0 +1,80 @@
+.buble-4 {
+  position: absolute;
+  width: 522px;
+  height: 366px;
+  top: 3500px;
+  right: -250px;
+  -webkit-animation: morph 25s ease infinite;
+  animation: morph 25s ease infinite;
+  z-index: 0;
+  pointer-events: none;
+  /* display: none; */
+}
+.buble-1 {
+  position: absolute;
+  width: 385px;
+  height: 458px;
+  top: 300px;
+  right: -170px;
+  -webkit-animation: morph 20s ease infinite;
+  animation: morph 20s ease infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.buble-2 {
+  position: absolute;
+  width: 393px;
+  height: 459px;
+  top: 3100px;
+  left: -150px;
+  -webkit-animation: morph 20s ease infinite;
+  animation: morph 20s ease infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.buble-3 {
+  position: absolute;
+  width: 1832px;
+  height: 3361px;
+  background: url(../../../../../../../themes/ndg-quantum/imgs/bg/big-bubble.svg)
+    no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  top: 2100px;
+  right: 0;
+  -webkit-animation: spin 20s ease infinite;
+  animation: spin 20s ease infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+.buble-5 {
+  position: absolute;
+  top: -60px;
+  left: -150px;
+  -webkit-animation: morph 25s ease infinite;
+  animation: morph 15s ease infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@-webkit-keyframes morph {
+  0% {
+  }
+
+  50% {
+    -webkit-transform: translate(40px, 100px) rotate(15deg);
+    transform: translate(40px, 100px) rotate(15deg);
+  }
+}
+
+@keyframes morph {
+  0% {
+  }
+
+  50% {
+    -webkit-transform: translate(40px, 100px) rotate(15deg);
+    transform: translate(40px, 100px) rotate(15deg);
+  }
+}
