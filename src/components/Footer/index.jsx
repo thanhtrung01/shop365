@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { FaFacebook, FaMapMarkerAlt } from "react-icons/fa";
 import { SiYoutubemusic } from "react-icons/si";
 import { AiFillInstagram } from "react-icons/ai";
+import logo from "../../assets/LOGO.png";
+
 const Footerx = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -43,7 +45,7 @@ const Footerx = () => {
       >
         <div className="w-auto pt-20"><Footer.Brand as={Link} href="/" className="text-slate-50 ml-14 pt-40 mt-25">
           <img
-            src="https://glo365.vn/wp-content/uploads/2020/07/Glo365-logo-2000x600.svg"
+            src={logo}
             className="mr-3 xl:h-14 sm:h-9 h-9"
             alt="Flowbite React Logo"
           />

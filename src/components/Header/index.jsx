@@ -6,6 +6,7 @@ import { FaFacebook } from "react-icons/fa";
 import { AiOutlineSearch } from "react-icons/ai";
 import { SiYoutubemusic } from "react-icons/si";
 import { AiFillInstagram } from "react-icons/ai";
+import logo from "../../assets/LOGO.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -55,11 +56,11 @@ const Header = () => {
           <div className="50 flex">
             <Navbar.Brand as={Link} to="/">
               <div className="hidden sm:block absolute left-0 xl:rounded-full py-3 px-3 inset-y-0 bg-rose-300" style={{ borderRadius: '35px 0 70px 35px' }}>
-                <img src="https://glo365.vn/wp-content/uploads/2020/07/Glo365-logo-2000x600.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+                <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
               </div>
               <div className="hidden sm:block xl:rounded-[10%]"></div>
               <div className="block sm:hidden absolute">
-                <img src="https://glo365.vn/wp-content/uploads/2020/07/Glo365-logo-2000x600.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
+                <img src={logo} className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
               </div>
             </Navbar.Brand>
             <div className="relative ml-[65%] w-[50%]">
